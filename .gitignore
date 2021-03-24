@@ -5,8 +5,8 @@
 *.zip
 .mypy_cache/
 .vscode/
-Chapter1_Introduction/
 !requirements.txt
+!.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
