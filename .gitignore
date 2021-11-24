@@ -1,12 +1,22 @@
-*.txt
-*.png
+################################
+###########  FILES  ############
+################################
+TODO*.*
+*.pptx
 *.pdf
-!MLGlossary.pdf
-*.zip
-.mypy_cache/
-.vscode/
-!requirements.txt
-!.gitkeep
+
+################################
+########### FOLDERS ############
+################################
+build/
+html/
+.benchmarks/
+reports/
+lectures/
+
+################################
+########### PYTHON #############
+################################
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -112,3 +122,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.mypy_cache*
+
+*.isorted
+
+################################
+########### VS CODE ############
+################################
+.vscode
+*.code-workspace
+.history
