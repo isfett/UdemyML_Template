@@ -21,17 +21,17 @@ def make_meshgrid(x: np.ndarray, y: np.ndarray, h: float = 0.02) -> Any:
     return xx, yy
 
 
-def plot_contours_(ax: Any, clf: Any, xx: np.ndarray, yy: np.ndarray, **params: Any) -> Any:
+def plot_contours(ax: Any, clf: Any, xx: np.ndarray, yy: np.ndarray, **params: Any) -> Any:
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
     Z = Z.reshape(xx.shape)
     out = ax.contourf(xx, yy, Z, **params)
     return out
 
 
-def plot_contours(clf: Any, x: np.ndarray, y: np.ndarray) -> None:
+def plot(clf: Any, x: np.ndarray, y: np.ndarray) -> None:
     _, ax = plt.subplots()
     X0, X1 = x[:, 0], x[:, 1]
     xx, yy = make_meshgrid(X0, X1)
-    plot_contours_(ax, clf, xx, yy, cmap=cmap_light, alpha=0.8)
+    plot_contours(ax, clf, xx, yy, cmap=cmap_light, alpha=0.8)
     plt.scatter(x[:, 0], x[:, 1], c=colors[y])
     plt.show()
